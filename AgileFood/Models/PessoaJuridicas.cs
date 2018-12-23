@@ -10,9 +10,9 @@ namespace AgileFood.Models
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int PessoaJuridicasId { get; set; }
 
-        [Required(ErrorMessage = "O Nome Fantasia é obrigatório.")]
-        [MaxLength(50)]
-        public string NomeFantasia { get; set; }
+        //[Required(ErrorMessage = "O Nome Fantasia é obrigatório.")]
+        //[MaxLength(50)]
+        //public string NomeFantasia { get; set; }
 
         [Required(ErrorMessage = "A Razão Social é obrigatório.")]
         [MaxLength(50)]

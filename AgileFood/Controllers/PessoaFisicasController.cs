@@ -29,7 +29,7 @@ namespace AgileFood.Controllers
         
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "PessoaTipoDescricao, Ativo, Email, Telefone, Endereco, PessoaTiposId, Nome," +
+        public ActionResult Create([Bind(Include = "PessoaTipoDescricao, Ativo, Email, Telefone, Endereco, PessoaTiposId, Nomes," +
                                                    " CPF, RG, DataNascimento")]PessoaFisicas pessoaFisicas)
         {
             try
@@ -70,7 +70,7 @@ namespace AgileFood.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "PessoasId,Ativo,Email,Telefone,Endereco,PessoaTiposId,PessoaFisicaId,Nome,CPF,RG,DataNascimento")] PessoaFisicas pessoaFisicas)
+        public ActionResult Edit([Bind(Include = "PessoasId,Ativo,Email,Telefone,Endereco,PessoaTiposId,PessoaFisicaId,Nomes,CPF,RG,DataNascimento")] PessoaFisicas pessoaFisicas)
         {
             if (ModelState.IsValid)
             {

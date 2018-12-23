@@ -73,7 +73,7 @@ namespace AgileFood.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.PessoasId = new SelectList(db.Pessoas, "PessoasId", "Email", fornecedores.PessoasId);
+            ViewBag.PessoasId = new SelectList(db.Pessoas, "PessoasId", "Nomes", fornecedores.PessoasId);
             return View(fornecedores);
         }
 

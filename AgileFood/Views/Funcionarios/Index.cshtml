@@ -1,0 +1,33 @@
+﻿@model IEnumerable<AgileFood.Models.Funcionarios>
+
+@{
+    ViewBag.Title = "Cadastro de Funcionário";
+}
+
+<br />
+
+<p>
+    @Html.ActionLink("Novo", "Create", null, new { @class="btn btn-primary btn-sm"})
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Nome")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pessoa.Nomes)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.FuncionariosId }, new { @class = "btn btn-warning btn-sm" }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.FuncionariosId }, new { @class = "btn btn-info btn-sm" }) |
+            @Html.ActionLink("Deletar", "Delete", new { id=item.FuncionariosId }, new { @class = "btn btn-danger btn-sm" })
+        </td>
+    </tr>
+}
+
+</table>

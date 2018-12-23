@@ -1,18 +1,18 @@
 ﻿@model IEnumerable<AgileFood.Models.PessoaFisicas>
 
 @{
-    ViewBag.Title = "Pessoa Fisicas Index";
+    ViewBag.Title = "Cadastro Pessoa Fisica";
 }
 
-<h2>Pessoa Fisicas Index</h2>
+<br />
 
 <p>
-    @Html.ActionLink("Novo", "Create")
+    @Html.ActionLink("Novo", "Create", null, new { @class = "btn btn-primary btn-sm" })
 </p>
-<table class="table">
+<table class="table table-hover">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.PessoaTipo.Descricao)
+            @Html.DisplayName("Descrição")
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Ativo)
@@ -24,7 +24,7 @@
             @Html.DisplayNameFor(model => model.Telefone)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Endereco)
+            @Html.DisplayName("Endereço")
         </th>
         @*
         <th>
@@ -32,7 +32,7 @@
         </th>
         *@
         <th>
-            @Html.DisplayNameFor(model => model.Nome)
+            @Html.DisplayName("Nome")
         </th>
         <th>
             @Html.DisplayNameFor(model => model.CPF)
@@ -41,7 +41,7 @@
             @Html.DisplayNameFor(model => model.RG)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.DataNascimento)
+            @Html.DisplayName("Data Nascimento")
         </th>
         <th></th>
     </tr>
@@ -67,7 +67,7 @@
             @Html.DisplayFor(modelItem => item.PessoaFisicasId)
         </td>*@
         <td>
-            @Html.DisplayFor(modelItem => item.Nome)
+            @Html.DisplayFor(modelItem => item.Nomes)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.CPF)
@@ -79,9 +79,9 @@
             @Html.DisplayFor(modelItem => item.DataNascimento)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.PessoasId }) |
-            @Html.ActionLink("Details", "Details", new { id = item.PessoasId }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.PessoasId })
+            @Html.ActionLink("Editar", "Edit", new { id = item.PessoasId }, new { @class = "btn btn-warning btn-sm" }) |
+            @Html.ActionLink("Detalhes", "Details", new { id = item.PessoasId }, new { @class = "btn btn-info btn-sm" }) |
+            @Html.ActionLink("Deletar", "Delete", new { id = item.PessoasId }, new { @class = "btn btn-danger btn-sm" })
         </td>
     </tr>
 }

@@ -1,26 +1,25 @@
 ﻿@model AgileFood.Models.Fornecedores
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Detalhes do Funcionário";
 }
 
-<h2>Details</h2>
+<br />
 
 <div>
-    <h4>Fornecedores</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Pessoa.Email)
+            @Html.DisplayName("Nome")
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Pessoa.Email)
+            @Html.DisplayFor(model => model.Pessoa.Nomes)
         </dd>
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.FornecedoresId }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Edit", new { id = Model.FornecedoresId }, new { @class="btn btn-warning btn-sm"}) |
+    @Html.ActionLink("Voltar lista", "Index", null, new { @class = "btn btn-success btn-sm" })
 </p>

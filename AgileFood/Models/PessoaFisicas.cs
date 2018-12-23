@@ -11,9 +11,9 @@ namespace AgileFood.Models
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int PessoaFisicasId { get; set; }
 
-        [Required(ErrorMessage = "O Nome é obrigatório.")]
-        [MaxLength(50)]
-        public string Nome { get; set; }
+        //[Required(ErrorMessage = "O Nome é obrigatório.")]
+        //[MaxLength(50)]
+        //public string Nome { get; set; }
 
         [Required(ErrorMessage = "O CPF é obrigatório.")]
         [MaxLength(11)]

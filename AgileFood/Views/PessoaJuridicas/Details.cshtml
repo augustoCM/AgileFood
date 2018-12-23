@@ -1,17 +1,16 @@
 ﻿@model AgileFood.Models.PessoaJuridicas
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Detalhes Pessoa Juridica";
 }
 
-<h2>Details</h2>
+<br />
 
 <div>
-    <h4>PessoaJuridicas</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.PessoaTipo.Descricao)
+            @Html.DisplayName("Tipo Pessoa")
         </dt>
 
         <dd>
@@ -43,31 +42,31 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Endereco)
+            @Html.DisplayName("Endereço")
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.Endereco)
         </dd>
 
-        <dt>
+        @*<dt>
             @Html.DisplayNameFor(model => model.PessoaJuridicasId)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.PessoaJuridicasId)
-        </dd>
+        </dd>*@
 
         <dt>
-            @Html.DisplayNameFor(model => model.NomeFantasia)
+            @Html.DisplayNameFor(model => model.Nomes)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.NomeFantasia)
+            @Html.DisplayFor(model => model.Nomes)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.RazaoSocial)
+            @Html.DisplayName("Razão Social")
         </dt>
 
         <dd>
@@ -83,7 +82,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.InscricaoEstadual)
+            @Html.DisplayName("Inscrição Estadual")
         </dt>
 
         <dd>
@@ -93,6 +92,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.PessoasId }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Edit", new { id = Model.PessoasId }, new { @class = "btn btn-warning btn-sm" }) |
+    @Html.ActionLink("Voltar lista", "Index", null, new { @class = "btn btn-success btn-sm" })
 </p>

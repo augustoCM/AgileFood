@@ -26,5 +26,7 @@ namespace AgileFood.Models
         public DbSet<PessoaJuridicas> PessoaJuridicas { get; set; }
 
         public System.Data.Entity.DbSet<AgileFood.Models.Fornecedores> Fornecedores { get; set; }
+
+        public System.Data.Entity.DbSet<AgileFood.Models.Funcionarios> Funcionarios { get; set; }
     }
 }

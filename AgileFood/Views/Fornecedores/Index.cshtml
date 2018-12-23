@@ -1,18 +1,18 @@
 ﻿@model IEnumerable<AgileFood.Models.Fornecedores>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Cadastro de Fornecedores";
 }
 
-<h2>Index</h2>
+<br />
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Novo", "Create", null, new { @class="btn btn-primary btn-sm"})
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Pessoa.Nomes)
+            @Html.DisplayName("Nome")
         </th>
         <th></th>
     </tr>
@@ -23,9 +23,9 @@
             @Html.DisplayFor(modelItem => item.Pessoa.Nomes)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.FornecedoresId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.FornecedoresId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.FornecedoresId })
+            @Html.ActionLink("Editar", "Edit", new { id=item.FornecedoresId }, new { @class = "btn btn-warning btn-sm" }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.FornecedoresId }, new { @class = "btn btn-info btn-sm" }) |
+            @Html.ActionLink("Deletar", "Delete", new { id=item.FornecedoresId }, new { @class = "btn btn-danger btn-sm" })
         </td>
     </tr>
 }

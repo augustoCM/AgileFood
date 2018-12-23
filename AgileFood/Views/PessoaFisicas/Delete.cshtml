@@ -1,14 +1,13 @@
 ﻿@model AgileFood.Models.PessoaFisicas
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Deletar Pessoa Fisica";
 }
 
-<h2>Delete</h2>
+<br />
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Deseja deletar a Pessoa: @Html.DisplayName(Model.Nomes)?</h3>
 <div>
-    <h4>PessoaFisicas</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -60,11 +59,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Nome)
+            @Html.DisplayNameFor(model => model.Nomes)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Nome)
+            @Html.DisplayFor(model => model.Nomes)
         </dd>
 
         <dt>
@@ -97,8 +96,8 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value="Deletar" class="btn btn-danger btn-sm" /> |
+            @Html.ActionLink("Voltar lista", "Index", null, new { @class = "btn btn-success btn-sm" })
         </div>
     }
 </div>
