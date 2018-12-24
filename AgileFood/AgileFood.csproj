@@ -132,9 +132,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Classes\CombosHelpers.cs" />
     <Compile Include="Controllers\FornecedoresController.cs" />
     <Compile Include="Controllers\FuncionariosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OrdensController.cs" />
     <Compile Include="Controllers\PessoaFisicasController.cs" />
     <Compile Include="Controllers\PessoaJuridicasController.cs" />
     <Compile Include="Controllers\PessoasController.cs" />
@@ -143,13 +145,17 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AddProdutoView.cs" />
     <Compile Include="Models\AgileFoodContext.cs" />
     <Compile Include="Models\Fornecedores.cs" />
     <Compile Include="Models\Funcionarios.cs" />
+    <Compile Include="Models\Ordens.cs" />
     <Compile Include="Models\PessoaFisicas.cs" />
     <Compile Include="Models\PessoaJuridicas.cs" />
     <Compile Include="Models\Pessoas.cs" />
     <Compile Include="Models\PessoaTipos.cs" />
+    <Compile Include="Models\Produtos.cs" />
+    <Compile Include="Models\ProdutosController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -219,6 +225,17 @@
     <Content Include="Views\Funcionarios\Edit.cshtml" />
     <Content Include="Views\Funcionarios\Index.cshtml" />
     <Content Include="Views\Fornecedores\Edit.cshtml" />
+    <Content Include="Views\Ordens\Create.cshtml" />
+    <Content Include="Views\Ordens\Delete.cshtml" />
+    <Content Include="Views\Ordens\Details.cshtml" />
+    <Content Include="Views\Ordens\Edit.cshtml" />
+    <Content Include="Views\Ordens\Index.cshtml" />
+    <Content Include="Views\Ordens\AddProduto.cshtml" />
+    <Content Include="Views\Produtos\Create.cshtml" />
+    <Content Include="Views\Produtos\Delete.cshtml" />
+    <Content Include="Views\Produtos\Details.cshtml" />
+    <Content Include="Views\Produtos\Edit.cshtml" />
+    <Content Include="Views\Produtos\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,42 @@
+﻿@model AgileFood.Models.Ordens
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Ordens</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Fornecedor.FornecedoresId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fornecedor.FornecedoresId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Data)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Data)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Anotacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Anotacao)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.OrdensId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
